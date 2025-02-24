@@ -14,7 +14,7 @@ export default {
 				tertiary: "#1E1E1E",
 			},
 			backgroundImage: {
-				layout: "url('/images/fundo.png')",
+				layout: "url('/images/bg-blue.jpg')",
 			},
 		},
 	},

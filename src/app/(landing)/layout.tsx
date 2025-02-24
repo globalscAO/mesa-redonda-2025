@@ -7,10 +7,10 @@ export default function LandingLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<div className="flex flex-col items-center">
+		<>
 			<Header />
-			<section className="max-w-5xl w-full">{children}</section>
+			{children}
 			<Footer />
-		</div>
+		</>
 	)
 }

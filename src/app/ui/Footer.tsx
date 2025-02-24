@@ -19,7 +19,7 @@ export default function Footer() {
 	]
 
 	return (
-		<footer className="flex w-full justify-center items-center p-12 bg-tertiary/60">
+		<footer className="flex w-full justify-center items-center lg:p-12 p-6 bg-tertiary/60">
 			<div className="w-full max-w-5xl flex flex-col gap-6">
 				<ul className="flex flex-wrap justify-between text-white text-sm gap-12">
 					<li className="max-w-64 w-full gap-3 flex flex-col">
