@@ -8,16 +8,32 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-	title: "Mesa Redonda com CEO's",
+	title: "Mesa Redonda com CEOs | Global Academy",
 	description:
-		"A Mesa Redonda com CEO's, é um evento promovido pela GLOBAL ACADEMY, marca da Global Services Corporation",
+		"A Mesa Redonda com CEOs é um evento promovido pela GLOBAL ACADEMY, uma marca da Global Services Corporation.",
+	openGraph: {
+		title: "Mesa Redonda com CEOs | Global Academy",
+		description:
+			"Descubra insights exclusivos de CEOs e líderes empresariais na Mesa Redonda da Global Academy.",
+		url: "https://mesaredonda.globalsc.ao",
+		siteName: "Mesa Redonda com CEOs",
+		type: "website",
+		images: [
+			{
+				url: "https://mesaredonda.globalsc.ao/images/capa.jpg",
+				width: 1200,
+				height: 630,
+				alt: "Banner do evento Mesa Redonda com CEOs",
+			},
+		],
+	},
 }
 
 export default function RootLayout({
 	children,
-}: Readonly<{
+}: {
 	children: React.ReactNode
-}>) {
+}) {
 	return (
 		<html lang="pt-PT">
 			<body className={`${inter.variable} antialiased`}>{children}</body>
