@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 		description:
 			"Descubra insights exclusivos de CEOs e líderes empresariais na Mesa Redonda da Global Academy.",
 		url: "https://mesaredonda.globalsc.ao",
-		siteName: "Mesa Redonda com CEOs",
+		siteName: "Mesa Redonda com CEOs - Outubro de 2025",
 		type: "website",
 		images: [
 			{
@@ -36,7 +36,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="pt-PT">
-			<body className={`${inter.variable} antialiased`}>{children}</body>
+			<body className={`${inter.variable} antialiased bg-layout bg-cover`}>
+				{children}
+			</body>
 		</html>
 	)
 }

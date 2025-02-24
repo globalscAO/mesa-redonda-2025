@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.primary-gradient {
+	@apply bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_200%] transition-all duration-500;
+	background-position: 0% 50%;
+}
+
+.primary-gradient:hover {
+	background-position: 100% 50%;
+}
