@@ -10,3 +10,11 @@
 .primary-gradient:hover {
 	background-position: 100% 50%;
 }
+
+.primary-gold {
+	@apply bg-gradient-to-r from-[#AE8625] via-yellow-400 to-[#D2AC47] transition-all duration-500;
+}
+
+.primary-gold:hover {
+	background-position: 100% 50%;
+}

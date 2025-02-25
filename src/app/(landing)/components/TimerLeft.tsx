@@ -1,10 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 
 const TimerLeft: React.FC = () => {
 	const eventDate = new Date("2025-10-01T00:00:00").getTime()
-	const calculateTimeLeft = () => {
+
+	const calculateTimeLeft = useCallback(() => {
 		const difference = eventDate - Date.now()
 		return difference > 0
 			? {
@@ -14,15 +15,17 @@ const TimerLeft: React.FC = () => {
 					seconds: Math.floor((difference / 1000) % 60),
 			  }
 			: { days: 0, hours: 0, minutes: 0, seconds: 0 }
-	}
+	}, [eventDate]) 
 
-	const [timeLeft, setTimeLeft] = useState(calculateTimeLeft)
+	const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
 	useEffect(() => {
+		const initialTime = calculateTimeLeft()
+		setTimeLeft(initialTime)
+
 		const timer = setInterval(() => setTimeLeft(calculateTimeLeft), 1000)
 		return () => clearInterval(timer)
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [])
+	}, [calculateTimeLeft]) 
 
 	return (
 		<div className="flex gap-5 max-lg:gap-3 w-full justify-between max-lg:w-full max-lg:justify-around max-lg:px-3">
