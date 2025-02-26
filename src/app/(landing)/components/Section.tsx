@@ -6,7 +6,7 @@ export default function Section({
 	className: string
 }) {
 	return (
-		<section className="p-12 max-lg:px-8 max-lg:py-12 flex items-center justify-center bg-tertiary/85 min-h-96">
+		<section className="p-12 max-lg:px-8 max-lg:py-12 flex items-center justify-center bg-gradient-to-b from-tertiary to-tertiary/80 min-h-96">
 			<div className={`max-w-5xl w-full ${className}`}>{children}</div>
 		</section>
 	)

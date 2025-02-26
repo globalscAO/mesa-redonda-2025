@@ -9,14 +9,17 @@ export default function WhatExpect() {
 				</h2>
 
 				<p className="max-lg:text-justify max-lg:text-sm">
-					A 5ª Edição da Mesa Redonda Com CEOS reunirá líderes influentes da
-					economia angolana e internacional, para discutir o impacto da inovação
-					na cadeia de produção, e como esse vetor, pode transformar a maneira e
-					a orientação dos lideres de modo que posicionem diante dos desafios
-					imposto pelos seus mercado. A inovação é um mecanismo de sobrevivência
-					das organizações, as lideranças são obrigadas a inovar para não perder
-					a competitividade, enfrentar os desafios e aproveitar as oportunidades
-					do mercado local e global.
+					A 5ª Edição da Mesa Redonda com CEOs reunirá líderes influentes da
+					economia angolana e internacional para discutir o impacto da
+					descarbonização e da neutralidade carbônica na cadeia de produção. O
+					evento abordará como a transição para uma economia de baixo carbono
+					pode transformar a estratégia e a orientação dos líderes, permitindo
+					que se posicionem de forma competitiva diante dos desafios impostos
+					pelo mercado. A sustentabilidade tornou-se um fator-chave para a
+					sobrevivência das organizações, exigindo que as lideranças adotem
+					soluções inovadoras para reduzir emissões, aumentar a eficiência
+					energética e aproveitar as oportunidades de um mercado global em
+					transformação.
 				</p>
 			</div>
 

@@ -14,20 +14,22 @@ export default function AboutUs() {
 
 			<div className="w-full max-w-[484px] flex flex-col text-white gap-3 max-lg:text-center">
 				<h1 className="text-lg max-lg:text-base">SOBRE</h1>
-                
+
 				<h2 className="font-bold text-xl max-lg:text-base">
 					MESA REDONDA COM CEOs - OUTUBRO DE 2025
 				</h2>
 
 				<p className="max-lg:text-justify max-lg:text-sm">
-					A &quot;Mesa Redonda com CEOs&quot; é um evento promovido pela
-					GLOBAL ACADEMY, marca da Global Services Corporation, líder do mercado
-					Angolano no segmento de eventos corporativos em temática de Liderança,
-					enquadrada no programa &quot;Líder do Futuro&quot; focado na
-					construção do perfil de Liderança Transformadora, destinado aos
-					principais atores do setor Público e Privado, incentivando-os a
-					desenvolver um conjunto de competências que possibilitam constituir
-					uma base para a transformação das suas instituições.
+					A &quot;Mesa Redonda com CEOs&quot; é um evento promovido pela GLOBAL
+					ACADEMY, marca da Global Services Corporation, líder do mercado
+					angolano no segmento de eventos corporativos. Nesta edição, o evento
+					destaca a Descarbonização e a Neutralidade Carbônica, alinhando-se ao
+					compromisso global com a sustentabilidade. Integrado ao programa
+					&quot;Líder do Futuro&quot;, o evento visa capacitar os principais
+					atores dos setores Público e Privado, incentivando-os a desenvolver
+					estratégias e competências essenciais para a transição energética e a
+					redução das emissões de carbono, contribuindo para um futuro mais
+					sustentável e inovador.
 				</p>
 
 				<button className="primary-gradient px-4 py-2 font-semibold text-white rounded-lg text-sm h-10">
