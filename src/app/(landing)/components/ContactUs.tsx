@@ -1,9 +1,13 @@
 import { FiArrowRightCircle } from "react-icons/fi"
 import Section from "./Section"
 
-export default function ContactUs() {
+export default function ContactUs({
+	externalRef,
+}: {
+	externalRef: (el: HTMLDivElement) => void
+}) {
 	return (
-		<Section className="flex justify-center gap-20 max-lg:gap-8 flex-wrap items-center">
+		<Section className="flex justify-center gap-20 max-lg:gap-8 flex-wrap items-center" ref={externalRef}>
 			<div className="max-w-md w-full flex flex-col text-center items-center text-white gap-3">
 				<h1 className="font-bold text-xl max-lg:text-base">
 					QUESTÕES, PROPOSTAS OU SUGESTÕES?

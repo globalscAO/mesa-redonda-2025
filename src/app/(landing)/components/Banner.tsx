@@ -1,8 +1,15 @@
 import TimerLeft from "./TimerLeft"
 
-export default function Banner() {
+export default function Banner({
+	externalRef,
+}: {
+	externalRef?: (el: HTMLDivElement) => void
+}) {
 	return (
-		<section className="w-full h-[600px] max-lg:h-[500px] relative text-white">
+		<section
+			className="w-full h-[600px] max-lg:h-[500px] relative text-white"
+			ref={externalRef}
+		>
 			<video
 				src={
 					"https://global-services-corporation.github.io/images/mr-2025/mr-banner-2.mp4"

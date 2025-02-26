@@ -15,9 +15,14 @@ const TimerLeft: React.FC = () => {
 					seconds: Math.floor((difference / 1000) % 60),
 			  }
 			: { days: 0, hours: 0, minutes: 0, seconds: 0 }
-	}, [eventDate]) 
+	}, [eventDate])
 
-	const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+	const [timeLeft, setTimeLeft] = useState({
+		days: 0,
+		hours: 0,
+		minutes: 0,
+		seconds: 0,
+	})
 
 	useEffect(() => {
 		const initialTime = calculateTimeLeft()
@@ -25,7 +30,7 @@ const TimerLeft: React.FC = () => {
 
 		const timer = setInterval(() => setTimeLeft(calculateTimeLeft), 1000)
 		return () => clearInterval(timer)
-	}, [calculateTimeLeft]) 
+	}, [calculateTimeLeft])
 
 	return (
 		<div className="flex gap-5 max-lg:gap-3 w-full justify-between max-lg:w-full max-lg:justify-around max-lg:px-3">

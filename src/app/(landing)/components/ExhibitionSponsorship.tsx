@@ -1,7 +1,11 @@
 import Image from "next/image"
 import Section from "./Section"
 
-export default function ExhibitionSponsorship() {
+export default function ExhibitionSponsorship({
+	externalRef,
+}: {
+	externalRef: (el: HTMLDivElement) => void
+}) {
 	const exhibitionSponsorship = [
 		{
 			id: 1,
@@ -30,7 +34,7 @@ export default function ExhibitionSponsorship() {
 	]
 
 	return (
-		<Section className={""}>
+		<Section ref={externalRef} className={""}>
 			<div className="flex flex-col gap-2.5 text-white w-full text-center">
 				<h1 className="text-lg max-lg:text-base">
 					GANHE DESTAQUE NO EVENTO COM:

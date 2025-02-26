@@ -1,8 +1,12 @@
 import Section from "./Section"
 
-export default function WhatExpect() {
+export default function WhatExpect({
+	externalRef,
+}: {
+	externalRef: (el: HTMLDivElement) => void
+}) {
 	return (
-		<Section className="flex flex-wrap max-lg:flex-wrap-reverse justify-center items-center gap-20 max-lg:gap-8">
+		<Section className="flex flex-wrap max-lg:flex-wrap-reverse justify-center items-center gap-20 max-lg:gap-8" ref={externalRef}>
 			<div className="w-full max-w-[484px] flex flex-col text-white gap-3 max-lg:text-center">
 				<h2 className="font-bold text-xl max-lg:text-base">
 					O QUE ESPERAR DESTE EVENTO?
