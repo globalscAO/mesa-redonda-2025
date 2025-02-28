@@ -56,8 +56,8 @@ export default function Footer() {
 
 				<hr className="w-full border-white/50" />
 
-				<p className="text-white text-sm">
-					© {new Date().getFullYear()} Global Services Corporation. Todos os
+				<p className="text-white text-sm max-lg:text-xs text-center">
+					© {new Date().getFullYear()} Global Services Corporation. Todos os
 					direitos reservados.
 				</p>
 			</div>

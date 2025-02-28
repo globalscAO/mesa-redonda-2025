@@ -1,3 +1,4 @@
+import PrimaryBtn from "@/app/ui/PrimaryBtn"
 import HighlightSection from "./HighlightSection"
 
 export default function OfficialOpening({
@@ -11,9 +12,9 @@ export default function OfficialOpening({
 				ABERTURA OFICIAL EM MARÇO DE 2025
 			</h1>
 
-			<button className="primary-gradient px-4 py-2 font-semibold text-white rounded-lg text-sm h-10">
-				BAIXAR FOLHETO DO EVENTO
-			</button>
+			
+
+			<PrimaryBtn title={"BAIXAR FOLHETO DO EVENTO"} />
 		</HighlightSection>
 	)
 }

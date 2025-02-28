@@ -1,11 +1,17 @@
 import Image from "next/image"
 import Section from "./Section"
+import { useState } from "react"
+import ExhibitionFormModal from "./ExhibitionModal"
+import SponsorshipFormModal from "./SponsorshipModal"
 
 export default function ExhibitionSponsorship({
 	externalRef,
 }: {
 	externalRef: (el: HTMLDivElement) => void
 }) {
+	const [isExhibitioOpen, setExhibitioOpen] = useState(false)
+	const [isSponsorshipOpen, setSponsorshipOpen] = useState(false)
+
 	const exhibitionSponsorship = [
 		{
 			id: 1,
@@ -18,9 +24,10 @@ export default function ExhibitionSponsorship({
 			],
 			description: "Garanta seu espaço e faça sua marca brilhar!",
 			btnTitle: "SOLICITAR EXPOSIÇÃO",
+			handleClick: () => setExhibitioOpen(true),
 		},
 		{
-			id: 1,
+			id: 2,
 			imgSrc: "/images/sponsorship.jpeg",
 			title: "Vantagens do Patrocínio:",
 			benefits: [
@@ -30,6 +37,7 @@ export default function ExhibitionSponsorship({
 			],
 			description: "Invista na visibilidade certa e conquiste novos clientes!",
 			btnTitle: "Patrocinar",
+			handleClick: () => setSponsorshipOpen(true),
 		},
 	]
 
@@ -44,9 +52,15 @@ export default function ExhibitionSponsorship({
 				</h2>
 			</div>
 
-			<div className="flex w-full gap-20 items-center justify-center flex-wrap max-lg:gap-8">
+			<div
+				className="flex w-full gap-20 items-center justify-center flex-wrap max-lg:gap-8"
+				id="investment"
+			>
 				{exhibitionSponsorship.map((item, index) => (
-					<div className="max-w-md w-full flex flex-col gap-8 max-lg:gap-4 py-8 max-lg:py-4" key={index}>
+					<div
+						className="max-w-md w-full flex flex-col gap-8 max-lg:gap-4 py-8 max-lg:py-4"
+						key={index}
+					>
 						<Image
 							src={item.imgSrc}
 							alt={""}
@@ -65,12 +79,23 @@ export default function ExhibitionSponsorship({
 							<p>{item.description}</p>
 						</div>
 
-						<button className="primary-gold hover:scale-110 px-4 py-2 font-semibold text-white rounded-lg text-sm h-10">
+						<button
+							onClick={item.handleClick}
+							className="primary-gold hover:scale-110 px-4 py-2 font-semibold text-white rounded-lg text-sm h-10"
+						>
 							{item.btnTitle.toUpperCase()}
 						</button>
 					</div>
 				))}
 			</div>
+
+			{isExhibitioOpen && (
+				<ExhibitionFormModal setIsModalOpen={setExhibitioOpen} />
+			)}
+
+			{isSponsorshipOpen && (
+				<SponsorshipFormModal setIsModalOpen={setSponsorshipOpen} />
+			)}
 		</Section>
 	)
 }

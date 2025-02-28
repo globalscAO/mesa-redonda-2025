@@ -1,3 +1,4 @@
+import PrimaryBtn from "@/app/ui/PrimaryBtn"
 import TimerLeft from "./TimerLeft"
 
 export default function Banner({
@@ -30,9 +31,7 @@ export default function Banner({
 						</h1>
 					</div>
 
-					<button className="primary-gradient px-4 py-2 font-semibold text-white rounded-lg text-sm h-10">
-						BAIXAR FOLHETO DO EVENTO
-					</button>
+					<PrimaryBtn title={"BAIXAR FOLHETO DO EVENTO"} />
 
 					<TimerLeft />
 				</div>

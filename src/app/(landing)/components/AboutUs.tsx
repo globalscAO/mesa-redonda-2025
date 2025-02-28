@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Section from "./Section"
+import PrimaryBtn from "@/app/ui/PrimaryBtn"
 
 export default function AboutUs() {
 	return (
@@ -12,7 +13,7 @@ export default function AboutUs() {
 				height={400}
 			/>
 
-			<div className="w-full max-w-[484px] flex flex-col text-white gap-3 max-lg:text-center">
+			<div className="w-full max-w-[484px] flex flex-col text-white gap-3 max-lg:text-center" id="about">
 				<h1 className="text-lg max-lg:text-base">SOBRE</h1>
 
 				<h2 className="font-bold text-xl max-lg:text-base">
@@ -32,9 +33,7 @@ export default function AboutUs() {
 					sustentável e inovador.
 				</p>
 
-				<button className="primary-gradient px-4 py-2 font-semibold text-white rounded-lg text-sm h-10">
-					BAIXAR FOLHETO DO EVENTO
-				</button>
+				<PrimaryBtn title={"BAIXAR FOLHETO DO EVENTO"} />
 			</div>
 		</Section>
 	)

@@ -7,7 +7,7 @@ export default function WhatExpect({
 }) {
 	return (
 		<Section className="flex flex-wrap max-lg:flex-wrap-reverse justify-center items-center gap-20 max-lg:gap-8" ref={externalRef}>
-			<div className="w-full max-w-[484px] flex flex-col text-white gap-3 max-lg:text-center">
+			<div className="w-full max-w-[484px] flex flex-col text-white gap-3 max-lg:text-center" id="what-expect">
 				<h2 className="font-bold text-xl max-lg:text-base">
 					O QUE ESPERAR DESTE EVENTO?
 				</h2>
