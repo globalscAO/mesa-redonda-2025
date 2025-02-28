@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
-import axios from "axios"
 import gsap from "gsap"
 import { useEffect, useRef } from "react"
 import ReactDOM from "react-dom"
+import { api } from "@/app/api/api"
 
 interface ExpositionFormModalProps {
 	setIsModalOpen: (open: boolean) => void
@@ -50,8 +50,8 @@ const ExhibitionFormModal: React.FC<ExpositionFormModalProps> = ({
 	const onSubmit: SubmitHandler<FormValues> = async (data) => {
 		setIsLoading(true)
 		try {
-			const response = await axios.post(
-				"https://gsc-website-api.onrender.com/exposition-email",
+			const response = await api.post(
+				"/exposition-email",
 				{
 					name: data.nome,
 					enterprise: data.enterprise,

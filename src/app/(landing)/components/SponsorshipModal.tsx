@@ -1,8 +1,9 @@
-import axios from "axios"
+
 import React, { useEffect, useState } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 import ReactDOM from "react-dom"
 import toast, { Toaster } from "react-hot-toast"
+import { api } from "@/app/api/api"
 
 interface SponsorModalProps {
 	setIsModalOpen: (open: boolean) => void
@@ -29,8 +30,8 @@ const SponsorshipFormModal: React.FC<SponsorModalProps> = ({
 	const onSubmit: SubmitHandler<FormValues> = async (data) => {
 		setIsLoading(true)
 		try {
-			const response = await axios.post(
-				"https://gsc-website-api.onrender.com/sponsor-email",
+			const response = await api.post(
+				"/sponsor-email",
 				{
 					name: data.name,
 					enterprise: data.enterprise,
